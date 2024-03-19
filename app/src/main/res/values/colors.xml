@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="black">#FF000000</color>
-    <color name="white">#FFFFFFFF</color>
+    <!-- Jasne kolory -->
+    <color name="bialy">#FFFFFF</color>
+    <color name="czarny">#000000</color>
+    <color name="jasny_niebieski">#64B5F6</color>
+    <color name="jasny_pomaranczowy">#FFB74D</color>
+    <color name="jasny_zielony">#81C784</color>
+    <color name="jasny_fioletowy">#BA68C8</color>
+    <color name="jasny_zolty">#FFF176</color>
+    <color name="jasny_czerwony">#EF9A9A</color>
+    <color name="jasny_turkusowy">#4DD0E1</color>
+    <color name="jasny_szary_niebieski">#90A4AE</color>
+    <color name="jasny_rozowy">#F48FB1</color>
+
+    <!-- Ciemne kolory -->
+    <color name="ciemny_niebieski">#2196F3</color>
+    <color name="ciemny_pomaranczowy">#FF9800</color>
+    <color name="ciemny_zielony">#4CAF50</color>
+    <color name="ciemny_fioletowy">#9C27B0</color>
+    <color name="ciemny_zolty">#FFEB3B</color>
+    <color name="ciemny_czerwony">#FF5722</color>
+    <color name="ciemny_turkusowy">#00BCD4</color>
+    <color name="ciemny_szary_niebieski">#607D8B</color>
+    <color name="ciemny_rozowy">#E91E63</color>
+
 </resources>

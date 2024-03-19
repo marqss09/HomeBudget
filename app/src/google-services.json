@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "230416508659",
+    "project_id": "homebudgeta",
+    "storage_bucket": "homebudgeta.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:230416508659:android:59613f6bb05cb618443986",
+        "android_client_info": {
+          "package_name": "pl.OlaAndMarek.homebudget"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC3ELDZvhggOcD0kX4uRlMAV5j-QGqKU-g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
