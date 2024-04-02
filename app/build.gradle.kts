@@ -54,13 +54,13 @@ dependencies {
 
     // Import the BoM for the Firebase platform
 
-//implementation('com.google.firebase:firebase-bom:32.8.0')
+    implementation("com.google.firebase:firebase-bom:32.8.0")
 
     // Declare the dependencies for the desired Firebase products without specifying versions
     // For example, declare the dependencies for Firebase Authentication and Cloud Firestore
 
-    //implementation('com.google.firebase:firebase-auth')
-    //implementation('com.google.firebase:firebase-firestore')
+    implementation("com.google.firebase:firebase-auth")
+    implementation("com.google.firebase:firebase-firestore")
 
 
 }
