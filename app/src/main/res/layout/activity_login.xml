@@ -7,8 +7,9 @@
     android:padding="16dp"
     android:orientation="vertical"
     android:gravity="center"
-    tools:context=".LoginActivity">
-
+    android:background="@color/zielony_tlo"
+    tools:context=".LoginActivity"
+    >
 
     <ImageView
         android:id="@+id/imageView"
@@ -17,86 +18,36 @@
 
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="24dp"
+        android:src="@drawable/pilka"
         />
+
     <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/czarny"
+        android:layout_marginBottom="10dp"
+        android:textSize="20dp"
+        android:text="LOGOWANIE"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wpisz swój Email" />
+
+    <EditText
+        android:id="@+id/password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Wpisz swoje hasło"
+        android:inputType="textPassword" />
+
+    <Button
         android:id="@+id/login"
-        android:hint="@string/login"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textAlignment="center"
-        />
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Email"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/imageView"
-            android:layout_marginTop="16dp"
-            android:hint="Email"
-            android:inputType="textEmailAddress"
-            android:text="Email"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/textInputLayoutPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/Password"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="8dp"
-            android:hint="Password"
-            android:inputType="textPassword"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-    <Button
-        android:id="@+id/buttonLogin"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="16dp"
-        android:text="Login"
-        />
-
-    <TextView
-        android:id="@+id/textViewForgotPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/buttonLogin"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="8dp"
-        android:text="Forgot Password?"
-        />
-
-    <TextView
-        android:id="@+id/textViewSignup"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/textViewForgotPassword"
-        android:layout_marginTop="16dp"
-        android:text="Don't have an account? Sign Up"
-        android:layout_centerHorizontal="true"
-        />
-
-    <Button
-        android:id="@+id/buttonRegister"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-
-        android:layout_marginTop="16dp"
-        android:text="register"
-        />
-    <ProgressBar
-        android:id="@+id/progressBar"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:visibility="gone" />
+        android:text="Zaloguj" />
 
 
 </LinearLayout>
