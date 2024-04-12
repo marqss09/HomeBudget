@@ -18,30 +18,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/EmailAdress"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:text="email"
-        />
-
-
-    <EditText
-        android:id="@+id/Password"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        />
-
     <Button
-        android:id="@+id/Button1"
+        android:id="@+id/buttzaloguj"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Tekst na guziku"
+
+        android:layout_marginTop="16dp"
+        android:text="zaloguj"
         />
 
 
