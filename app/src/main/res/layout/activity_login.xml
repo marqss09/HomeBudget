@@ -44,10 +44,16 @@
         android:inputType="textPassword" />
 
     <Button
-        android:id="@+id/login"
+        android:id="@+id/loginbtn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Zaloguj" />
+
+    <Button
+        android:id="@+id/registrationbtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Zarejestruj" />
 
 
 </LinearLayout>

@@ -26,9 +26,9 @@ class Register : AppCompatActivity() {
 
         auth = FirebaseAuth.getInstance()
 
-        binding.buttonRegister.setOnClickListener{
-            val email = binding.Email.text.toString()
-            val password = binding.Password.text.toString()
+        binding.btnRegister.setOnClickListener{
+            val email = binding.email.text.toString()
+            val password = binding.passwd.text.toString()
             if(checkAllField()){
                 auth.createUserWithEmailAndPassword(email, password).addOnCompleteListener{
                     //when acc is created
@@ -48,23 +48,34 @@ class Register : AppCompatActivity() {
     }
 
     private fun checkAllField(): Boolean {
-        val email = binding.Email.text.toString()
-        if (binding.Email.text.toString() == "") {
-            binding.textInputLayoutEmail.error = "Pole jest wymagane"
+        val email = binding.email.text.toString()
+        if (binding.email.text.toString() == "") {
+            Toast.makeText(getApplicationContext(),
+                "Please enter email!!",
+                Toast.LENGTH_LONG)
+                .show();
             return false
         }
-        if(!Patterns.EMAIL_ADDRESS.matcher(email).matches()){
-            binding.textInputLayoutEmail.error = "Sprawdz adres email"
+        if(binding.passwd.text.toString() == ""){
+            Toast.makeText(getApplicationContext(),
+                "Please enter password!!",
+                Toast.LENGTH_LONG)
+                .show();
             return false
         }
-        if(binding.Password.text.toString() == ""){
-            binding.textInputLayoutPassword.error == "Pole jest wymagane "
+        if(binding.passwd2.text.toString() == ""){
+            Toast.makeText(getApplicationContext(),
+                "You need confirm your password!!",
+                Toast.LENGTH_LONG)
+                .show();
+            return false
         }
-        if(binding.Confirm.text.toString() == ""){
-            binding.textInputLayoutPassword.error == "Pole jest wymagane "
-        }
-        if(binding.Password.text.toString() != binding.Confirm.text.toString()){
-            binding.textInputLayoutConfirm.error = "Hasla musza byc takie same"
+        if(binding.passwd.text.toString() != binding.passwd2.text.toString()){
+            Toast.makeText(getApplicationContext(),
+                "Hasla musza byc takie same!!",
+                Toast.LENGTH_LONG)
+                .show();
+            return false
         }
 
         return true

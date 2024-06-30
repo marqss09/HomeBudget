@@ -11,21 +11,55 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/Tekst1"
+        android:id="@+id/profilename"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:textStyle="bold"
         android:text="Hello World!"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
     <Button
-        android:id="@+id/buttzaloguj"
+        android:id="@+id/zaklady"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
         android:layout_marginTop="16dp"
-        android:text="zaloguj"
+        android:text="zaklady"
+        />
+    <Button
+        android:id="@+id/wyniki"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="wyniki meczow"
+        />
+    <Button
+        android:id="@+id/tabelagraczy"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="tabela graczy"
+        />
+    <Button
+        android:id="@+id/mojprofil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="moj profil"
+        />
+    <Button
+        android:id="@+id/buttwyloguj"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="16dp"
+        android:text="wyloguj"
         />
 
 

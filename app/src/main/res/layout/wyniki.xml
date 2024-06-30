@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#228B22"
+    >
+
+    <!-- Nagłówek -->
+    <TextView
+        android:id="@+id/wyniki"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="wyniki"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <!-- Tabela 4x4 -->
+    <TableLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- Wiersz 1 -->
+        <TableRow>
+
+            <TextView
+                android:id="@+id/druzyna1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:text="R1C1"/>
+
+            <TextView
+                android:id="@+id/wynik"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textAlignment="center"
+                android:padding="8dp"
+                android:text="R1C3"/>
+            <TextView
+                android:id="@+id/druzyna2"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                android:textAlignment="center"
+                android:textStyle="bold"
+                android:textSize="20dp"
+                android:padding="8dp"
+                android:text="R1C4"/>
+        </TableRow>
+    </TableLayout>
+
+
+
+</LinearLayout>
