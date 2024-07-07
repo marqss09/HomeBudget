@@ -16,8 +16,45 @@ import com.google.firebase.database.FirebaseDatabase
 import pl.OlaAndMarek.homebudget.databinding.ActivityLoginBinding
 import pl.OlaAndMarek.homebudget.databinding.ActivityMainBinding
 import com.google.firebase.FirebaseApp;
+import pl.OlaAndMarek.homebudget.sampledata.User
 
 class MainActivity : AppCompatActivity() {
+    private fun goToProfil() {
+        //zmienic docelowo na klase profilu
+        val intent = Intent(this, UserActivity::class.java).apply {
+            //flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            val uid = auth.uid.toString()
+            //intent.putExtra(uid)
+        }
+        startActivity(intent)
+    }
+    private fun goToTabela() {
+        val intent = Intent(applicationContext, tabelagraczy::class.java).apply {
+            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+        startActivity(intent)
+    }
+    private fun goToZaklady() {
+        val intent = Intent(applicationContext, zaklady::class.java).apply {
+            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+        startActivity(intent)
+    }
+
+    private fun goToWyniki() {
+        val intent = Intent(applicationContext, wyniki::class.java).apply {
+            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+        startActivity(intent)
+    }
+
+    private fun backToLogin() {
+        val intent = Intent(applicationContext, LoginActivity::class.java).apply {
+            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+        startActivity(intent)
+    }
+
     private lateinit var binding: ActivityMainBinding
     private var auth: FirebaseAuth = FirebaseAuth.getInstance()
     private lateinit var firebaseRef : DatabaseReference
@@ -61,39 +98,7 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }*/
     }
-    private fun goToProfil() {
-        //zmienic docelowo na klase profilu
-        val intent = Intent(applicationContext, wyniki::class.java).apply {
-            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        startActivity(intent)
-    }
-    private fun goToTabela() {
-        val intent = Intent(applicationContext, tabelagraczy::class.java).apply {
-            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        startActivity(intent)
-    }
-    private fun goToZaklady() {
-        val intent = Intent(applicationContext, zaklady::class.java).apply {
-            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        startActivity(intent)
-    }
 
-    private fun goToWyniki() {
-        val intent = Intent(applicationContext, wyniki::class.java).apply {
-            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        startActivity(intent)
-    }
-
-    private fun backToLogin() {
-        val intent = Intent(applicationContext, LoginActivity::class.java).apply {
-            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-        }
-        startActivity(intent)
-    }
 
 }
 

@@ -39,6 +39,16 @@
                 android:value="true" />
 
         </activity>
+        <activity
+            android:name=".UserActivity"
+            android:exported="false">
+        </activity>
+        <activity
+            android:name=".wyniki"
+            android:exported="false">
+
+        </activity>
+
     </application>
 
 </manifest>
