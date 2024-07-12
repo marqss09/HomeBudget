@@ -20,10 +20,13 @@ import pl.OlaAndMarek.homebudget.sampledata.zaklady
 
 public class UserActivity : AppCompatActivity() {
 
+
+
     private lateinit var etemail: EditText
     private lateinit var etuserid: EditText
     private lateinit var wyslij: Button
     private lateinit var profilename: TextView
+    private lateinit var profilepkt: TextView
     private lateinit var emailname: TextView
 
     private lateinit var binding : ActivityProfileBinding
@@ -50,19 +53,19 @@ public class UserActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
 
-        val db2 =
 
-        etemail = binding.email
-        etuserid = binding.userid
-        wyslij = binding.wyslij
-        profilename = binding.profilname
-        emailname = binding.emailid
+
+
+        emailname = binding.profilemail
+        profilepkt = binding.profilepkt
+
 
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("user").document("SKotlwZRFKzpfNN2XZqA ")
 
         ref.get().addOnSuccessListener {
             if(it != null){
+                Log.d(TAG, "DocumentSnapshot readed with ID")
                 val profilname = it.data?.get("uid").toString()
                 val profileemail = it.data?.get("email").toString()
 

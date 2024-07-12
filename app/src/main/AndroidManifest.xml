@@ -15,7 +15,7 @@
         android:theme="@style/Theme.HomeBudget"
         tools:targetApi="31">
         <activity
-            android:name=".MainActivity"
+            android:name=".RegistrationActivity.MainActivity"
             android:exported="false" >
         </activity>
 
@@ -26,7 +26,7 @@
         </activity>
 
         <activity
-            android:name=".LoginActivity"
+            android:name=".RegistrationActivity.RegistrationActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

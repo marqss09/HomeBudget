@@ -8,7 +8,7 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#228B22"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity.MainActivity">
 
     <TextView
         android:id="@+id/profilename"
@@ -45,14 +45,7 @@
         android:layout_marginTop="16dp"
         android:text="tabela graczy"
         />
-    <Button
-        android:id="@+id/mojprofil"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        android:layout_marginTop="16dp"
-        android:text="moj profil"
-        />
     <Button
         android:id="@+id/buttwyloguj"
         android:layout_width="match_parent"

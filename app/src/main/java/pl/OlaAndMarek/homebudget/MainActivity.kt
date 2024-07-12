@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
         binding.zaklady.setOnClickListener{goToZaklady()}
         binding.wyniki.setOnClickListener{goToWyniki()}
         binding.tabelagraczy.setOnClickListener{goToTabela()}
-        binding.mojprofil.setOnClickListener{goToProfil()}
+        //binding.mojprofil.setOnClickListener{goToProfil()}
         binding.buttwyloguj.setOnClickListener{
             auth.signOut()
             if (auth.currentUser == null ){

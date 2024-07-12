@@ -8,48 +8,27 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#228B22"
-    tools:context=".MainActivity">
+    tools:context=".RegistrationActivity.MainActivity">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Wpisz swój Email" />
-
-    <EditText
-        android:id="@+id/userid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Wpisz swoje hasło"
-        android:inputType="textPassword" />
     <TextView
-        android:id="@+id/profilname"
+        android:id="@+id/profilemail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="32dp"
         android:textStyle="bold"
-        android:text="nazwa profilu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Tutaj bedzie email"
+        />
+
+
+
 
     <TextView
-        android:id="@+id/emailid"
+        android:id="@+id/profilepkt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="32dp"
         android:textStyle="bold"
-        android:text="email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-    <Button
-        android:id="@+id/wyslij"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="wyslij" />
-
+        android:text="tutaj beda punkty"
+        />
 
 </LinearLayout>
