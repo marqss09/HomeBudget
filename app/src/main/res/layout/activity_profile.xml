@@ -8,31 +8,18 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="#228B22"
-    tools:context=".MainActivity">
+    tools:context=".User.UserActivity">
 
-    <EditText
-        android:id="@+id/email"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Wpisz swój Email" />
 
-    <EditText
-        android:id="@+id/userid"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Wpisz swoje hasło"
-        android:inputType="textPassword" />
+
     <TextView
         android:id="@+id/profilname"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="32dp"
         android:textStyle="bold"
-        android:text="nazwa profilu"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="test@test.com"
+         />
 
     <TextView
         android:id="@+id/emailid"
@@ -40,16 +27,21 @@
         android:layout_height="wrap_content"
         android:textSize="32dp"
         android:textStyle="bold"
-        android:text="email"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="test@test.com"
+         />
+    <TextView
+        android:id="@+id/punkty"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="32dp"
+        android:textStyle="bold"
+        android:text="5 pkt"
+        />
     <Button
-        android:id="@+id/wyslij"
+        android:id="@+id/powrot"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="wyslij" />
+        android:text="powrot" />
 
 
 </LinearLayout>

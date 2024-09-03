@@ -1,11 +1,10 @@
-package pl.OlaAndMarek.homebudget
+package pl.OlaAndMarek.homebudget.Wyniki
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import pl.OlaAndMarek.homebudget.databinding.WynikiBinding
-import pl.OlaAndMarek.homebudget.sampledata.User
 import pl.OlaAndMarek.homebudget.sampledata.mecz
 
 class WynikiAdapter(private val mecze:List<mecz>) :RecyclerView.Adapter<WynikiAdapter.MyViewHolder>() {

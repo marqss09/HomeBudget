@@ -37,14 +37,7 @@
         android:layout_marginTop="16dp"
         android:text="wyniki meczow"
         />
-    <Button
-        android:id="@+id/tabelagraczy"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
 
-        android:layout_marginTop="16dp"
-        android:text="tabela graczy"
-        />
     <Button
         android:id="@+id/mojprofil"
         android:layout_width="match_parent"

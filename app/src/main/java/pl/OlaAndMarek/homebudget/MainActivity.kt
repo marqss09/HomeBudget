@@ -3,28 +3,22 @@ package pl.OlaAndMarek.homebudget
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.Handler
-import android.os.Looper
 import android.widget.Toast
-import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.view.ViewCompat
-import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.database.DatabaseReference
-import com.google.firebase.database.FirebaseDatabase
-import pl.OlaAndMarek.homebudget.databinding.ActivityLoginBinding
+import pl.OlaAndMarek.homebudget.Login.LoginActivity
 import pl.OlaAndMarek.homebudget.databinding.ActivityMainBinding
-import com.google.firebase.FirebaseApp;
-import pl.OlaAndMarek.homebudget.sampledata.User
+import pl.OlaAndMarek.homebudget.User.UserActivity
+import pl.OlaAndMarek.homebudget.Wyniki.wyniki
+import pl.OlaAndMarek.homebudget.Zaklady.zaklady
 
 class MainActivity : AppCompatActivity() {
     private fun goToProfil() {
-        //zmienic docelowo na klase profilu
+
         val intent = Intent(this, UserActivity::class.java).apply {
-            //flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
             val uid = auth.uid.toString()
-            //intent.putExtra(uid)
+
         }
         startActivity(intent)
     }
@@ -57,7 +51,7 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private var auth: FirebaseAuth = FirebaseAuth.getInstance()
-    private lateinit var firebaseRef : DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
@@ -67,12 +61,10 @@ class MainActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        if (auth.currentUser != null){
-            Toast.makeText(this, "Zostales zalogowany", Toast.LENGTH_SHORT).show()
-        }
+
         binding.zaklady.setOnClickListener{goToZaklady()}
         binding.wyniki.setOnClickListener{goToWyniki()}
-        binding.tabelagraczy.setOnClickListener{goToTabela()}
+        //binding.tabelagraczy.setOnClickListener{goToTabela()}
         binding.mojprofil.setOnClickListener{goToProfil()}
         binding.buttwyloguj.setOnClickListener{
             auth.signOut()
@@ -82,23 +74,6 @@ class MainActivity : AppCompatActivity() {
                 backToLogin()
             }
         }
-
-/*
-        fun onStart() {
-            super.onStart()
-            isCurentUser()
-        }
     }
-
-    private fun isCurentUser() {
-        auth.currentUser?.let {
-            val intent: Intent = Intent(applicationContext, LoginActivity::class.java).apply {
-                flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
-            }
-            startActivity(intent)
-        }*/
-    }
-
-
 }
 

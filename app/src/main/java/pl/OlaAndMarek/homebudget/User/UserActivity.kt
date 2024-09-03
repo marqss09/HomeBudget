@@ -1,73 +1,100 @@
-package pl.OlaAndMarek.homebudget
+package pl.OlaAndMarek.homebudget.User
 
-import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
-import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
+import androidx.activity.viewModels
 import androidx.appcompat.app.AppCompatActivity
-import com.google.firebase.auth.FirebaseAuth
-import com.google.firebase.firestore.ktx.firestore
-import com.google.firebase.ktx.Firebase
-import pl.OlaAndMarek.homebudget.databinding.ActivityLoginBinding
-import pl.OlaAndMarek.homebudget.databinding.ActivityMainBinding
+import androidx.lifecycle.MutableLiveData
+import androidx.lifecycle.Observer
+import pl.OlaAndMarek.homebudget.MainActivity
 import pl.OlaAndMarek.homebudget.databinding.ActivityProfileBinding
-import pl.OlaAndMarek.homebudget.sampledata.zaklady
+import pl.OlaAndMarek.homebudget.sampledata.User
+
 
 
 
 public class UserActivity : AppCompatActivity() {
 
-    private lateinit var etemail: EditText
-    private lateinit var etuserid: EditText
-    private lateinit var wyslij: Button
+
     private lateinit var profilename: TextView
     private lateinit var emailname: TextView
 
     private lateinit var binding : ActivityProfileBinding
 
-    private var uid: String? = null
+    //private val userVm by viewModels<UserViewModel>()
+
     private var nick: String? = null
     private var pkt: Int = 0
     private var email: String?= null
-    private var obstawienia: List<zaklady>? = null
 
-    val user = hashMapOf(
-        "uid" to uid,
-        "nick" to nick,
-        "pkt" to pkt,
-        "email" to email,
-        "obstawienia" to obstawienia
-    )
 
-    val db = Firebase.firestore
+    private val PROFILE_DEBUG = "PROFILE_DEBUG"
+
+
+   // val cloudResult = MutableLiveData<User?>()
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         binding = ActivityProfileBinding.inflate(layoutInflater)
         super.onCreate(savedInstanceState)
         setContentView(binding.root)
+        binding.powrot.setOnClickListener {
 
-        val db2 =
+            backToMain()
 
-        etemail = binding.email
-        etuserid = binding.userid
-        wyslij = binding.wyslij
-        profilename = binding.profilname
+        }
+    }
+
+
+    private fun backToMain() {
+        val intent = Intent(applicationContext, MainActivity::class.java).apply {
+            flags = (Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK)
+        }
+        startActivity(intent)
+    }
+/*
         emailname = binding.emailid
+        profilename = binding.profilname
+
+        userVm.user.observe(this, Observer {
+
+
+                bindUser(user = "userod")
+
+
+                //emailname =userVm.user.uid
+                //profilename = it.email
+
+            // Actualize interfejs użytkownika na podstawie danych użytkownika
+            // Przykład:
+            // textViewUserEmail.text = user.email
+
+            //}
+        })
+ */
+}
+    /*
 
         val userId = FirebaseAuth.getInstance().currentUser!!.uid
-        val ref = db.collection("user").document("SKotlwZRFKzpfNN2XZqA ")
+        db = FirebaseFirestore.getInstance()
 
-        ref.get().addOnSuccessListener {
-            if(it != null){
-                val profilname = it.data?.get("uid").toString()
-                val profileemail = it.data?.get("email").toString()
+        val ref = db.collection("user").document("SKotlwZRFKzpfNN2XZqA")
 
-                profilename.text = profilname
-                emailname.text = profileemail
+
+        ref.get().addOnSuccessListener { document ->
+            if(document != null){
+                Log.d("Firestore", "DocumentSnapshot data: " + document.getData());
+                //val profilname = ref.get()
+                //val profilname = it.data?.get("uid").toString()
+               // val profileemail = it.data?.get("email").toString()
+
+                //profilename.text = profilname
+                //emailname.text = profileemail
 
             }
 
@@ -91,9 +118,10 @@ public class UserActivity : AppCompatActivity() {
         }*/
     }
 
+
     override fun onStart() {
         super.onStart()
-        /*
+
         var auth: FirebaseAuth = FirebaseAuth.getInstance()
         val userid = FirebaseAuth.getInstance().currentUser!!.uid
         val ref = db.collection("users").document(userid)
@@ -114,8 +142,10 @@ public class UserActivity : AppCompatActivity() {
 
         }
 
-         */}
-}
+    */
+
+
+
 
 
 

@@ -1,4 +1,4 @@
-package pl.OlaAndMarek.homebudget
+package pl.OlaAndMarek.homebudget.Login
 
 import android.os.Bundle
 import android.util.Log
@@ -20,7 +20,7 @@ class Register : AppCompatActivity() {
 
 
         super.onCreate(savedInstanceState)
-//binding = ActivitySignUpBinding.inflate(layoutInflater)
+
         binding = ActivityRegisterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 

@@ -1,19 +1,11 @@
-package pl.OlaAndMarek.homebudget
+package pl.OlaAndMarek.homebudget.Login
 
 import android.content.Intent
 import android.os.Bundle
-import android.text.TextUtils
-import android.util.Log
-import android.view.View
-import android.widget.Button
-import android.widget.EditText
-import android.widget.ProgressBar
-import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.google.firebase.auth.FirebaseAuth
+import pl.OlaAndMarek.homebudget.MainActivity
 import pl.OlaAndMarek.homebudget.databinding.ActivityLoginBinding
-import pl.OlaAndMarek.homebudget.databinding.ActivityMainBinding
-import pl.OlaAndMarek.homebudget.databinding.ActivityRegisterBinding
 
 
 class LoginActivity : AppCompatActivity() {
@@ -36,11 +28,6 @@ class LoginActivity : AppCompatActivity() {
         val password: String = binding.password.toString().trim()
         binding.loginbtn.setOnClickListener {
             fbAuth.signInWithEmailAndPassword(email, password)
-            //.addOnSuccessListener { authRes ->
-            //    if (authRes.user != null) startApp()
-            // }
-            // .addOnFailureListener { exc ->
-            // Log.d(DEBUG,exc.message.toString())
             startApp()
         }
 
