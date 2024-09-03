@@ -47,7 +47,7 @@
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:padding="8dp"
-                android:text="Polska"/>
+                android:text="druzyna1"/>
 
             <TextView
                 android:id="@+id/wynik"
@@ -56,7 +56,7 @@
                 android:layout_weight="1"
                 android:textAlignment="center"
                 android:padding="8dp"
-                android:text=""/>
+                android:text="0-0"/>
             <TextView
                 android:id="@+id/druzyna2"
                 android:layout_width="0dp"
@@ -66,7 +66,7 @@
                 android:textStyle="bold"
                 android:textSize="20dp"
                 android:padding="8dp"
-                android:text="Holandia"/>
+                android:text="druzyna2"/>
         </TableRow>
 
         <Button
